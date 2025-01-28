@@ -4,13 +4,14 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {Button} from "@/components/ui/button";
 import {Moon, Sun} from "lucide-react";
 import {useTheme} from "next-themes";
+import {stringify} from "@/constants/stringify";
 
 export default function Toggle() {
     const {setTheme} = useTheme();
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button className={"border-none"} variant="outline" size="icon">
+                <Button className={"border-none"} variant="ghost" size="icon">
                     <Sun
                         className="border-none h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"/>
                     <Moon
@@ -20,13 +21,13 @@ export default function Toggle() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => setTheme("light")}>
-                    Light
+                    {stringify.light}
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    Dark
+                    {stringify.dark}
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("system")}>
-                    System
+                    {stringify.system}
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
