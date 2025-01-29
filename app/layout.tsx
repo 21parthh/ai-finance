@@ -6,6 +6,7 @@ import {ThemeProvider} from "@/components/ThemeProvider/theme-provider";
 import Index from "@/components/header";
 import "./globals.css";
 import Footer from "@/components/footer";
+import {Toaster} from "sonner";
 
 const inter = Inter({subsets: ["latin"]})
 
@@ -32,6 +33,7 @@ export default function RootLayout({
                 disableTransitionOnChange>
                 <Index/>
                 <main className={"min-h-screen"}>{children}</main>
+                <Toaster richColors/>
                 <Footer/>
             </ThemeProvider>
             </body>
