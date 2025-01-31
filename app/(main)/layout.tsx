@@ -6,7 +6,7 @@ interface MainLayoutProps {
 
 export default function MainLayout({children}: MainLayoutProps) {
     return (
-        <div className="container  mx-auto my-32">
+        <div className="container px-5 mx-auto my-32">
             {children}
         </div>
     );
