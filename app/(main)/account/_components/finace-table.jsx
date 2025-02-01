@@ -184,6 +184,8 @@ const FinanceTable = ({transactions}) => {
         </div>
 
 
+
+
         {/* Transactions */}
         <div className="rounded-md border w-full flex justify-between">
             <Table>

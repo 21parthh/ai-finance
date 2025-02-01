@@ -5,6 +5,8 @@ import {CircleDollarSign, Receipt, WalletCards} from "lucide-react";
 import FinanceTable from "../_components/finace-table";
 import {Suspense} from "react";
 import {BarLoader} from "react-spinners";
+import Accountchart from "../_components/accountcharts";
+import SpendingByCategory from "../_components/spending-category";
 
 export default async function AccountsPage({params}) {
 
@@ -80,7 +82,16 @@ export default async function AccountsPage({params}) {
 
 
             </div>
-            <Suspense fallback={<BarLoader className="mt-4" width={"100%"} color="#9333ea" /> }>
+
+            <Suspense fallback={<BarLoader className="mt-4" width={"100%"} color="#9333ea"/>}>
+                <Accountchart transactions={transactions}/>
+            </Suspense>
+
+            <Suspense fallback={<BarLoader className="mt-4" width={"100%"} color="#9333ea"/>}>
+                <SpendingByCategory transactions={transactions}/>
+            </Suspense>
+
+            <Suspense fallback={<BarLoader className="mt-4" width={"100%"} color="#9333ea"/>}>
                 <FinanceTable transactions={transactions}/>
             </Suspense>
         </div>
