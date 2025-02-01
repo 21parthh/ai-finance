@@ -3,13 +3,26 @@ import {PlusCircle} from "lucide-react";
 import {Card} from "@/components/ui/card";
 import {getUserAccounts} from "@/actions/dashboard";
 import AccountCard from "@/app/(main)/dashboard/_components/account-card";
+import {getCurrentBudget} from "@/actions/budget";
+import {BudgetProgress} from "@/app/(main)/dashboard/_components/budget-progress";
 
 export default async function Dashboard() {
     const accounts = await getUserAccounts()
-    return (
-        <div className={"px-5"}>
-            {/*Budget Progress*/}
 
+    const defaultAccount = accounts?.find((account) => account.isDefault);
+
+    let budgetData = null;
+    if (defaultAccount) {
+        budgetData = await getCurrentBudget(defaultAccount.id);
+    }
+
+    return (
+        <div className={"space-y-8"}>
+            {/*Budget Progress*/}
+            <BudgetProgress
+                initialBudget={budgetData?.budget}
+                currentExpenses={budgetData?.currentExpenses || 0}
+            />
             {/* Dashboard Overview*/}
 
             {/* Account Grid*/}
