@@ -30,7 +30,7 @@ import {cn} from "@/lib/utils";
 import {createTransaction} from "@/actions/transaction";
 import {transactionSchema} from "@/app/lib/schema";
 
-// import { ReceiptScanner } from "./recipt-scanner";
+import { ReceiptScanner } from "./reciept-scanner";
 
 export default function AddTransactionForm({
                                        accounts,
@@ -95,19 +95,19 @@ export default function AddTransactionForm({
         }
     };
 
-    // const handleScanComplete = (scannedData) => {
-    //     if (scannedData) {
-    //         setValue("amount", scannedData.amount.toString());
-    //         setValue("date", new Date(scannedData.date));
-    //         if (scannedData.description) {
-    //             setValue("description", scannedData.description);
-    //         }
-    //         if (scannedData.category) {
-    //             setValue("category", scannedData.category);
-    //         }
-    //         toast.success("Receipt scanned successfully");
-    //     }
-    // };
+    const handleScanComplete = (scannedData) => {
+        if (scannedData) {
+            setValue("amount", scannedData.amount.toString());
+            setValue("date", new Date(scannedData.date));
+            if (scannedData.description) {
+                setValue("description", scannedData.description);
+            }
+            if (scannedData.category) {
+                setValue("category", scannedData.category);
+            }
+            toast.success("Receipt scanned successfully");
+        }
+    };
 
     useEffect(() => {
         if (transactionResult?.success && !transactionLoading) {
@@ -133,7 +133,7 @@ export default function AddTransactionForm({
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Receipt Scanner - Only show in create mode */}
             {/*{!editMode && <ReceiptScanner onScanComplete={handleScanComplete} />}*/}
-
+            <ReceiptScanner onScanComplete={handleScanComplete} />
             {/* Type */}
             <div className="space-y-2">
                 <label className="text-sm font-medium">Type</label>
