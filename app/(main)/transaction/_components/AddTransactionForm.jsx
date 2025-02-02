@@ -31,6 +31,7 @@ import {createTransaction} from "@/actions/transaction";
 import {transactionSchema} from "@/app/lib/schema";
 
 import { ReceiptScanner } from "./reciept-scanner";
+import {updateTransaction} from "../../../../actions/transaction";
 
 export default function AddTransactionForm({
                                        accounts,
@@ -132,8 +133,8 @@ export default function AddTransactionForm({
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Receipt Scanner - Only show in create mode */}
-            {/*{!editMode && <ReceiptScanner onScanComplete={handleScanComplete} />}*/}
-            <ReceiptScanner onScanComplete={handleScanComplete} />
+            {!editMode && <ReceiptScanner onScanComplete={handleScanComplete} />}
+            {/*<ReceiptScanner onScanComplete={handleScanComplete} />*/}
             {/* Type */}
             <div className="space-y-2">
                 <label className="text-sm font-medium">Type</label>
