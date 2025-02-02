@@ -1,4 +1,4 @@
-import {ArrowUpRight, BarChart3, BellRing, Wallet} from "lucide-react";
+import {ArrowUpRight} from "lucide-react";
 import {motion, useScroll, useSpring, useTransform} from "framer-motion";
 import {useRef} from "react";
 

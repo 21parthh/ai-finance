@@ -1,5 +1,4 @@
 import {motion} from "framer-motion";
-import {ArrowUpCircle, Clock, Lightbulb} from "lucide-react";
 
 import {Card} from "@/components/ui/card";
 import {howitworks} from "@/constants/data";
