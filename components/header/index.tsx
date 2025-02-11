@@ -1,5 +1,5 @@
 import React from "react";
-import { PenBox, LayoutDashboard, Landmark } from "lucide-react";
+import { PenBox, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import {
       SignedIn,
