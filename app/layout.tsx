@@ -7,6 +7,7 @@ import Index from "@/components/header";
 import "./globals.css";
 import Footer from "@/components/footer";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       return (
             <ClerkProvider>
                   <html lang="en" suppressHydrationWarning>
+                        <Analytics />
                         <body className={`${inter.className}`}>
                               <ThemeProvider
                                     attribute="class"
