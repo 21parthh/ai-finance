@@ -1,5 +1,5 @@
 export const stringify = {
-      footerTitle: "Made with ❤️ by Parth",
+      footerTitle: "Made with ❤️ by Kalyani, Neha, Pranjali, Parth",
       logoTitle: "Wealth Mind",
       login: "Login",
       signUp: "SignUp",
