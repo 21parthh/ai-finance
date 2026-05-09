@@ -30,7 +30,11 @@ export default function NotFound(){
                 className="mt-10 text-gray-400"
                 initial={{ y: 20 }}
                 animate={{ y: 0 }}
-                transition={{ yoyo: Infinity, duration: 1 }}
+                transition={{
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    duration: 1,
+                }}
             >
                 <p className="italic">Not all who wander are lost.</p>
             </motion.div>
