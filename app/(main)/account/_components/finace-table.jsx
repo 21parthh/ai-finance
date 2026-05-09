@@ -253,7 +253,7 @@ const FinanceTable = ({transactions}) => {
                         <TableCell
                             className={cn("text-right font-medium", transaction.type === "EXPENSE" ? "text-red-500" : "text-green-500")}
                         >
-                            {transaction.type === "EXPENSE" ? "-" : "+"}$
+                            {transaction.type === "EXPENSE" ? "-" : "+"}₹
                             {transaction.amount.toFixed(2)}
                         </TableCell>
                         <TableCell>

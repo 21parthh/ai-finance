@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import Link from "next/link";
-import {ArrowRight, ChevronRight, DollarSign, Shield, Zap} from "lucide-react";
+import {ArrowRight, ChevronRight, IndianRupee, Shield, Zap} from "lucide-react";
 
 import {Button} from "@/components/ui/button";
 import {stringify} from "@/constants/stringify";
@@ -72,7 +72,7 @@ export default function BannerSection() {
                         <Zap className="h-4 w-4"/> {stringify.realTimeAnalytics}
                     </div>
                     <div className="flex items-center gap-2">
-                        <DollarSign className="h-4 w-4"/> {stringify.noHiddenFees}
+                        <IndianRupee className="h-4 w-4"/> {stringify.noHiddenFees}
                     </div>
                 </motion.div>
             </div>

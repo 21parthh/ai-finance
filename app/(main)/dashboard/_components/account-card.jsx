@@ -72,7 +72,7 @@ export default function AccountCard({ account }) {
                                     />
                               </CardHeader>
                               <CardContent className="text 2xl font-bold">
-                                    <div>${parseFloat(balance).toFixed(2)}</div>
+                                    <div>₹{parseFloat(balance).toFixed(2)}</div>
                                     <p
                                           className={
                                                 "text-xs text-muted-foreground capitalize"

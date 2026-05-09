@@ -1,7 +1,7 @@
 import {getAccountWithTransactions} from "../../../../actions/accounts";
 import {notFound} from "next/navigation";
 import {Card, CardContent, CardHeader, CardTitle} from "../../../../components/ui/card";
-import {CircleDollarSign, Receipt, WalletCards} from "lucide-react";
+import {IndianRupee, Receipt, WalletCards} from "lucide-react";
 import FinanceTable from "../_components/finace-table";
 import {Suspense} from "react";
 import {BarLoader} from "react-spinners";
@@ -36,11 +36,11 @@ export default async function AccountsPage({params}) {
                         <CardTitle className="text-sm font-medium text-muted-foreground">
                             Current Balance
                         </CardTitle>
-                        <CircleDollarSign className="h-4 w-4 text-muted-foreground"/>
+                        <IndianRupee className="h-4 w-4 text-muted-foreground"/>
                     </CardHeader>
                     <CardContent>
                         <div className="text-2xl font-bold text-white">
-                            ${parseFloat(account.balance).toFixed(2)}
+                            ₹{parseFloat(account.balance).toFixed(2)}
                         </div>
                         <p className="text-xs text-muted-foreground">
                             Available for withdrawal

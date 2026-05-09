@@ -203,7 +203,7 @@ export default function AddTransactionForm({
                                                       key={account.id}
                                                       value={account.id}
                                                 >
-                                                      {account.name} ($
+                                                      {account.name} (₹
                                                       {parseFloat(
                                                             account.balance
                                                       ).toFixed(2)}

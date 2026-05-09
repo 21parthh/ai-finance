@@ -170,7 +170,7 @@ export function DashboardOverview({ accounts, transactions }) {
                       ) : (
                         <ArrowUpRight className="mr-1 h-4 w-4" />
                       )}
-                      ${transaction.amount.toFixed(2)}
+                      ₹{transaction.amount.toFixed(2)}
                     </div>
 
                     {/* Dropdown Menu */}
@@ -228,7 +228,7 @@ export function DashboardOverview({ accounts, transactions }) {
                     outerRadius={80}
                     fill="#8884d8"
                     dataKey="value"
-                    label={({ name, value }) => `${name}: $${value.toFixed(2)}`}
+                    label={({ name, value }) => `${name}: ₹${value.toFixed(2)}`}
                   >
                     {pieChartData.map((entry, index) => (
                       <Cell
@@ -238,7 +238,7 @@ export function DashboardOverview({ accounts, transactions }) {
                     ))}
                   </Pie>
                   <Tooltip
-                    formatter={(value) => `$${value.toFixed(2)}`}
+                    formatter={(value) => `₹${value.toFixed(2)}`}
                     contentStyle={{
                       backgroundColor: "hsl(var(--popover))",
                       border: "1px solid hsl(var(--border))",

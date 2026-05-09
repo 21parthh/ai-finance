@@ -73,7 +73,7 @@ export const security = [
 export const statistics = [
       {
             title: "Total Revenue",
-            value: "$3800",
+            value: "₹3800",
             change: "+23.36%",
             icon: Wallet,
             color: "blue",
@@ -96,7 +96,7 @@ export const statistics = [
 
 export const stats = [
       { label: "Active Users", value: "100,000+", icon: Users },
-      { label: "Transactions Processed", value: "$2B+", icon: LineChartIcon },
+      { label: "Transactions Processed", value: "₹2B+", icon: LineChartIcon },
       { label: "Data Points Analyzed", value: "500M+", icon: Laptop },
       { label: "Customer Satisfaction", value: "99.9%", icon: CheckCircle2 },
 ];
